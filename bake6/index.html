@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- section 1 -->
+<div class="hero" id="Home">
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <img src="LOGOs.png" alt="KEITHTSON Logo" />
+        </div>
+        <div class="hamburger">&#9776;</div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#Home" class="active">Home</a></li>
+        <li><a href="#Blog">Blog</a></li>
+        <li><a href="#Contact">Contact Us</a></li>
+        <li><a href="#Explore">Services</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content">
+      <p class="subheading">Delicious Cafe</p>
+      <h1><i>Sweet Treats,<br>Perfect Eats</i></h1>
+      <div class="buttons">
+        <a href="#" class="btn primary">Shop Now</a>
+        <a href="#" class="btn secondary">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+   document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+});
+  </script>
+
+  <!-- section 2 -->
+    <div class="product-section" id="Blog">
+    <h2 class="section-title" data-aos="fade-down" data-aos-duration="1000">Top Products</h2>
+    <div class="product-grid">
+
+      <!-- Card 1 -->
+      <div class="product-card" data-aos="zoom-in-up" data-aos-delay="0">
+        <div class="card-bg">
+          <img src="bake1.png" alt="Whole Grain Bread" class="product-img">
+          <div class="card-info">
+            <p class="price">$40</p>
+            <p class="name">Whole Grain <br> Bread</p>
+          </div> 
+          <div class="card-actions">
+            <button class="info-btn">i</button>
+            <button class="add-btn">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="product-card" data-aos="zoom-in-up" data-aos-delay="100">
+        <div class="card-bg">
+          <img src="bake2.png" alt="Whole Grain Bread" class="product-img">
+          <div class="card-info">
+            <p class="price">$40</p>
+            <p class="name">Whole Grain <br> Bread</p>
+          </div> 
+          <div class="card-actions">
+            <button class="info-btn">i</button>
+            <button class="add-btn">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="product-card" data-aos="zoom-in-up" data-aos-delay="200">
+        <div class="card-bg">
+          <img src="bake3.png" alt="Whole Grain Bread" class="product-img rotate-img">
+          <div class="card-info">
+            <p class="price">$40</p>
+            <p class="name">Whole Grain <br> Bread</p>
+          </div> 
+          <div class="card-actions">
+            <button class="info-btn">i</button>
+            <button class="add-btn">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="product-card" data-aos="zoom-in-up" data-aos-delay="300">
+        <div class="card-bg">
+          <img src="bake4.png" alt="Whole Grain Bread" class="product-img">
+          <div class="card-info">
+            <p class="price">$40</p>
+            <p class="name">Whole Grain <br> Bread</p>
+          </div> 
+          <div class="card-actions">
+            <button class="info-btn">i</button>
+            <button class="add-btn">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="product-card" data-aos="zoom-in-up" data-aos-delay="400">
+        <div class="card-bg">
+          <img src="bake5.png" alt="Whole Grain Bread" class="product-img">
+          <div class="card-info">
+            <p class="price">$40</p>
+            <p class="name">Whole Grain <br> Bread</p>
+          </div> 
+          <div class="card-actions">
+            <button class="info-btn">i</button>
+            <button class="add-btn">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="product-card" data-aos="zoom-in-up" data-aos-delay="500">
+        <div class="card-bg">
+          <img src="bake6.png" alt="Whole Grain Bread" class="product-img">
+          <div class="card-info">
+            <p class="price">$40</p>
+            <p class="name">Whole Grain <br> Bread</p>
+          </div> 
+          <div class="card-actions">
+            <button class="info-btn">i</button>
+            <button class="add-btn">Add</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+   <!-- section 3 -->
+<section class="banner" data-aos="fade-up" data-aos-duration="1200">
+    <div class="overlay" data-aos="zoom-in" data-aos-duration="1000">
+      <h2 data-aos="fade-up" data-aos-delay="300">20% Off Your<br><span>First Order</span></h2>
+      <p data-aos="fade-up" data-aos-delay="400">
+        Suspendisse ac rhoncus nisl,<br>eu tempor urna. Curabitur vel<br>bibenjgg.
+      </p>
+      <a href="#" class="btn" data-aos="fade-up" data-aos-delay="600">Learn More</a>
+    </div>
+  </section>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+   <!-- section 4 -->
+<section class="explore-section" id="Explore">
+  <h2 class="explore-title">Explore More</h2>
+
+  <ul class="category-nav">
+    <li class="active" data-category="all">Cake</li>
+    <li data-category="muffins">Muffins</li>
+    <li data-category="croissant">Croissant</li>
+    <li data-category="bread">Bread</li>
+    <li data-category="tart">Tart</li>
+    <li data-category="favorite">Favorite</li>
+  </ul>
+
+  <div class="explore-grid">
+  <img src="img1.png" alt="Muffin" data-category="muffins" data-aos="fade-up">
+  <img src="img2.png" alt="Berry Cake" data-category="cake" data-aos="fade-up" data-aos-delay="100">
+  <img src="img3.png" alt="Fruit Tart" data-category="tart" data-aos="fade-up" data-aos-delay="200">
+  <img src="img4.png" alt="Lemon Cake" data-category="cake" data-aos="fade-up" data-aos-delay="300">
+  <img src="img5.png" alt="Bread" data-category="bread" data-aos="fade-up" data-aos-delay="400">
+  <img src="img6.png" alt="Croissant" data-category="croissant" data-aos="fade-up" data-aos-delay="500">
+</div>
+<script>
+    const categoryItems = document.querySelectorAll('.category-nav li');
+    const images = document.querySelectorAll('.explore-grid img');
+
+    categoryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        document.querySelector('.category-nav li.active')?.classList.remove('active');
+        item.classList.add('active');
+
+        const selectedCategory = item.getAttribute('data-category');
+
+        images.forEach(img => {
+          const imgCategory = img.getAttribute('data-category');
+
+          if (selectedCategory === 'all' || imgCategory === selectedCategory) {
+            img.style.display = 'block';
+          } else {
+            img.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</section>
+   <!-- section 5 -->
+<section class="promo-banner" data-aos="fade-up" data-aos-duration="1200">
+  <div class="promo-overlay" data-aos="zoom-in" data-aos-duration="1000">
+    <h2 data-aos="fade-up" data-aos-delay="300">About Us</h2>
+    <p data-aos="fade-up" data-aos-delay="400">
+      Suspendisse ac rhoncus nisl,<br> eu tempor urna. Curabitur vel<br>
+      bibendum lorem. Morbi<br> convallis.
+    </p>
+    <a href="#" class="promo-btn" data-aos="fade-up" data-aos-delay="600">Read More</a>
+  </div>
+</section>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+    <!-- section 6 -->
+    <section class="featured-treats">
+  <h2 class="treats-heading" data-aos="fade-up">Featured Treats</h2>
+  
+  <div class="treats-container">
+    <div class="treat-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="pastery.png" alt="Puff Pastry">
+      <div class="treat-details">
+        <span class="treat-name">Puff Pastry</span>
+        <span class="treat-price">$8</span>
+      </div>
+    </div>
+
+    <div class="treat-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="doughnut.png" alt="Doughnuts">
+      <div class="treat-details">
+        <span class="treat-name">Doughnuts</span>
+        <span class="treat-price">$8</span>
+      </div>
+    </div>
+
+    <div class="treat-card" data-aos="zoom-in" data-aos-delay="300">
+      <img src="brownies.png" alt="Brownies">
+      <div class="treat-details">
+        <span class="treat-name">Brownies</span>
+        <span class="treat-price">$8</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
+
+<!-- footer -->
+<footer class="footer" id="Contact">
+  <div class="footer-top">
+    <img src="logo1.png" alt="Logo" class="logo" >
+    <div class="social-icons">
+      <span>Follow us</span>
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-pinterest-p"></i>
+      <i class="fab fa-whatsapp"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+  </div>
+
+  <div class="footer-content">
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <p>(456) 789–12301</p>
+      <p>info@modrino.co.uk</p>
+      <p>South 13th street</p>
+      <p>New york America</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Explore</h3>
+      <p><a href="#Home">Home</a></p>
+      <p><a href="#Blog">Blog</a></p>
+      <p><a href="#Contact">Contact us</a></p>
+      <p><a href="#Explore">Services</a></p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Recent News</h3>
+      <div class="news-item">
+        <img src="puff1.png" alt="Pastry">
+        <div>
+          <small>June 14,2024</small>
+          <p>Puff pastry bliss.</p>
+        </div>
+      </div>
+      <div class="news-item">
+        <img src="puff.png" alt="Pastry">
+        <div>
+          <small>June 14,2024</small>
+          <p>Puff pastry bliss.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2024 Bake House. All rights reserved
+  </div>
+</footer>
+
+</body>
+</html>
