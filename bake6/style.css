@@ -131,51 +131,26 @@ h1 {
 
 
 
-@media (max-width: 991px) {
+
+
+@media (max-width: 768px) {
   .navbar {
     padding: 20px;
     position: relative;
     top: 2px;
-  }
-  .nav-links{
-    font-weight: bold;
-  }
-
-  .logo img {
-    height: 150px;
-    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .hero-content {
-    left: 30px;
-    top: 45%;
-  }
-
-  h1 {
-    font-size: 48px;
-  }
-
-  .subheading {
-    font-size: 22px;
-    left: 0;
-  }
-
-  .buttons {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-}
-
-
-@media (max-width: 768px) {
   .hamburger {
     display: block;
-    font-size: 30px;
+    font-size: 40px;
     color: white;
     cursor: pointer;
     position: absolute;
-    right: 20px;
-    top: 20px;
+    top: 25px;
+    right: 25px;
     z-index: 1001;
   }
 
@@ -184,22 +159,25 @@ h1 {
     flex-direction: column;
     background-color: #000;
     position: relative;
-    right: -100px;
+    bottom: 70px;
+    right: 300px;
     padding: 20px 25px;
     border-radius: 8px;
-    width: 180px;
-    height: 280px;
+    height: 250px;
+    width: 190px;
     z-index: 1000;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+    font-weight: bold;
   }
 
   .nav-links.show {
     display: flex;
+    margin-left: 40%;
   }
 
   .nav-links li {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
 
   .nav-links li:last-child {
@@ -208,7 +186,7 @@ h1 {
 
   .nav-links li a {
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     text-decoration: none;
     transition: color 0.3s ease;
   }
@@ -217,18 +195,44 @@ h1 {
   .nav-links li a.active {
     color: #e3b27d;
   }
+
+  .logo img {
+    height: 120px;
+    max-width: 100%;
+  }
+
+  .hero-content {
+    position: absolute;
+    left: 30px;
+    top: 45%;
+    transform: translateY(-50%);
+  }
+
+  .subheading {
+    font-size: 22px;
+    position: relative;
+    bottom: 20px;
+    left: 0;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .buttons {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 }
-
-
 @media (max-width: 500px) {
   .hamburger {
     display: block;
-    font-size: 30px;
+    font-size: 26px;
     color: white;
     cursor: pointer;
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 15px;
     z-index: 1001;
   }
 
@@ -236,24 +240,25 @@ h1 {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px;
-    right: 20px;
+    right: 0;
+    top: 39px;
     background-color: rgba(0, 0, 0, 0.95);
-    padding: 20px 25px;
-    border-radius: 10px;
-    width: 180px;
-    height: 280px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    padding: 12px 16px;
+    border-radius: 8px;
+    width: 130px;
+    height: 240px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     transition: all 0.3s ease;
   }
 
   .nav-links.show {
     display: flex;
+    margin-left: 20%;
   }
 
   .nav-links li {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   .nav-links li:last-child {
@@ -261,9 +266,9 @@ h1 {
   }
 
   .nav-links li a {
-    color: #fff;
+    color: white;
+    font-size: 13px;
     text-decoration: none;
-    font-size: 16px;
     transition: color 0.3s ease;
   }
 
@@ -271,7 +276,46 @@ h1 {
   .nav-links li a.active {
     color: #e3b27d;
   }
+
+  .logo img {
+    height: 80px;
+    max-width: 100%;
+    position: relative;
+    bottom: 10px;
+  }
+
+  .navbar {
+    padding: 15px;
+    position: relative;
+    top: 0;
+  }
+
+  .hero-content {
+    left: 20px;
+    top: 50%;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  .subheading {
+    font-size: 18px;
+    left: 0;
+    position: relative;
+    bottom: 20px;
+
+  }
+
+  .buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
+
+
+
+
 
 
 @keyframes fadeUp {
@@ -544,6 +588,8 @@ h1 {
       text-decoration: none;
       border-radius: 4px;
       font-family: Arial, Helvetica, sans-serif;
+      position: relative;
+      top: 10px;
     }
 
     @media (max-width: 768px) {
@@ -877,8 +923,8 @@ h1 {
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
-    height: 30px;
-    width: 30px;
+    height: 43px;
+    width: 45px;
   }
 
   .footer-content {
