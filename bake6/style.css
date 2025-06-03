@@ -480,25 +480,27 @@ h1 {
 
 
 @media (max-width: 1024px) {
-  .product-grid {
-    gap: 0.5rem;
-  }
-
-  .product-card {
-    flex: 1 1 45%;
+.product-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 2.5rem;
   }
 
   .card-bg {
-    height: 230px;
-    background-size: cover; /* ensures image doesn't scale up */
+    width: 90vw;         /* Fill 90% of the screen width */
+    max-width: 100%;     /* Ensure no overflow */
+    height: 320px;       /* Increased height */
+    padding: 1rem;
+    background-size: cover;
   }
 
   .card-actions {
-    bottom: 120px;
+    position: relative;
+    
   }
   .card-info {
     position: relative;
-    bottom: 50px;
+    top: 20px;
   }
 }
 
@@ -921,6 +923,7 @@ h1 {
   margin-bottom: 10px;
   margin: 0 auto; 
   display: block;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .treat-details {
