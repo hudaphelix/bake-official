@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us - Huda’s Bakery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed&family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fff8f0;
+      color: #333;
+    }
+
+.about-hero {
+  background: url('images/Rectangle 10 (1) (18).png') no-repeat center center/cover;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+  z-index: 1;
+}
+
+.hero-text {
+  z-index: 2;
+  position: relative;
+  padding: 20px 40px;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+.hero-text h1 {
+  font-family: 'Sansita Swashed', cursive;
+  font-size: 52px;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #ffeadb;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff4e6, 0 0 10px #f9caa7;
+  }
+  100% {
+    text-shadow: 0 0 10px #ffe5d0, 0 0 20px #ffa07a;
+  }
+}
+
+
+    .about-content {
+      max-width: 950px;
+      margin: 60px auto;
+      padding: 20px;
+      line-height: 1.8;
+    }
+
+    .about-content h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      color: #c14f33;
+    }
+
+    .about-content p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin: 40px auto 60px;
+      background-color: #c14f33;
+      color: #fff;
+      padding: 14px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #a93d28;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .about-hero h1 {
+        font-size: 32px;
+        padding: 15px 25px;
+      }
+
+      .about-content h2 {
+        font-size: 28px;
+      }
+
+      .about-content {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="about-hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-text" data-aos="fade-up">
+    <h1>Welcome to Huda’s Bakery</h1>
+    <p>Where every bite tells a sweet story.</p>
+  </div>
+</div>
+
+  <div class="about-content">
+    <h2 data-aos="fade-up">Our Story</h2>
+    <p data-aos="fade-up">
+      Huda’s Bakery began as a small kitchen dream in 2020 and quickly grew into a beloved local bakery.
+      Our passion for crafting delightful baked goods shines through in every loaf of bread, muffin, tart, and cake we create.
+      We started with just a few family recipes, and today we offer a full range of sweet and savory treats.
+    </p>
+    <p data-aos="fade-up">
+      Our founder, Huda, believes baking is more than a business — it’s a way to connect hearts.
+      From morning croissants to birthday cakes, each product is handmade with the freshest ingredients and lots of love.
+      Our community helped shape our journey, and we’re proud to be part of your everyday and special moments.
+    </p>
+
+    <h2 data-aos="fade-up">Our Philosophy</h2>
+    <p data-aos="fade-up">
+      At Huda’s Bakery, we believe in slow baking, real butter, rich chocolate, and fresh fruit.
+      We don’t use preservatives or artificial flavors — just honest ingredients and time-tested methods.
+      Our goal is to make every bite feel like a warm hug.
+    </p>
+    <p data-aos="fade-up">
+      Baking isn’t just science; it’s art. That’s why we design every dessert to look as good as it tastes.
+      Whether it’s a box of cookies or a tiered wedding cake, our team puts in attention and care into each detail.
+    </p>
+
+    <h2 data-aos="fade-up">Why Choose Us?</h2>
+    <p data-aos="fade-up">
+      ✔ Fresh, high-quality ingredients<br>
+      ✔ Made-to-order custom bakes<br>
+      ✔ Artistic and unique presentation<br>
+      ✔ Friendly service with a smile<br>
+      ✔ Hygienic kitchen and eco-friendly packaging
+    </p>
+
+    <div style="text-align: center;" data-aos="fade-up">
+      <a href="index.html#about" class="back-button">← Back to Home</a>
+    </div>
+  </div>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 700,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script>
+
+</body>
+</html>

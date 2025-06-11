@@ -1,0 +1,5 @@
+admin|12345
+huda|cake123
+rajat|cake123
+abhishek|cake123
+ansh|cake123

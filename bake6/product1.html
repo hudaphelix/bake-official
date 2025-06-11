@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Whole Grain Bread</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Body and background */
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background: linear-gradient(135deg, #fff3e0, #fbe4c7);
+      color: #5e3a2d;
+      font-family: 'Sansita Swashed', cursive;
+      position: relative;
+      min-height: 100vh;
+      z-index: 1;
+    }
+
+    /* Floating wheat container */
+    .floating-wheat {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      overflow: visible;
+      z-index: 0;
+    }
+
+    /* Wheat icons */
+    .wheat {
+      position: absolute;
+      bottom: -60px;
+      opacity: 0.3;
+      animation-name: floatUp;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      fill: #D1A054;
+      filter: drop-shadow(0 0 1px rgba(0,0,0,0.1));
+      will-change: transform, opacity;
+      transform-origin: center;
+    }
+
+    /* Different wheat stalk variations */
+    .wheat:nth-child(1) {
+      left: 5%;
+      width: 50px;
+      height: 50px;
+      animation-duration: 20s;
+      animation-delay: 0s;
+      opacity: 0.35;
+      fill: #d2a454;
+    }
+    .wheat:nth-child(2) {
+      left: 15%;
+      width: 40px;
+      height: 40px;
+      animation-duration: 24s;
+      animation-delay: 5s;
+      opacity: 0.25;
+      fill: #e1b36f;
+    }
+    .wheat:nth-child(3) {
+      left: 25%;
+      width: 55px;
+      height: 55px;
+      animation-duration: 18s;
+      animation-delay: 2s;
+      opacity: 0.3;
+      fill: #c9993f;
+    }
+    .wheat:nth-child(4) {
+      left: 35%;
+      width: 45px;
+      height: 45px;
+      animation-duration: 22s;
+      animation-delay: 7s;
+      opacity: 0.28;
+      fill: #d4a85a;
+    }
+    .wheat:nth-child(5) {
+      left: 45%;
+      width: 60px;
+      height: 60px;
+      animation-duration: 26s;
+      animation-delay: 1s;
+      opacity: 0.33;
+      fill: #e7be7d;
+    }
+    .wheat:nth-child(6) {
+      left: 55%;
+      width: 38px;
+      height: 38px;
+      animation-duration: 21s;
+      animation-delay: 4s;
+      opacity: 0.3;
+      fill: #d4a85a;
+    }
+    .wheat:nth-child(7) {
+      left: 65%;
+      width: 50px;
+      height: 50px;
+      animation-duration: 19s;
+      animation-delay: 3s;
+      opacity: 0.27;
+      fill: #c9993f;
+    }
+    .wheat:nth-child(8) {
+      left: 75%;
+      width: 43px;
+      height: 43px;
+      animation-duration: 23s;
+      animation-delay: 6s;
+      opacity: 0.25;
+      fill: #e1b36f;
+    }
+    .wheat:nth-child(9) {
+      left: 85%;
+      width: 48px;
+      height: 48px;
+      animation-duration: 20s;
+      animation-delay: 8s;
+      opacity: 0.35;
+      fill: #d2a454;
+    }
+    .wheat:nth-child(10) {
+      left: 92%;
+      width: 35px;
+      height: 35px;
+      animation-duration: 25s;
+      animation-delay: 0s;
+      opacity: 0.22;
+      fill: #c18722;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Product container */
+    .product-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: auto;
+      gap: 60px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1; /* Above floating wheat */
+    }
+
+    .card-bg {
+      background-image: url('images/logo.png'); /* Replace with your background image */
+      background-size: cover;
+      background-position: center;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+      width: 450px;
+      height: 450px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-bg:hover {
+      box-shadow: 0 12px 50px rgba(0, 0, 0, 0.7);
+      transform: scale(1.02);
+    }
+
+    .product-img {
+      max-width: 410px;
+      max-height: 410px;
+      border-radius: 20px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      object-fit: contain;
+    }
+
+    .product-img:hover {
+      transform: scale(1.05);
+    }
+
+    .product-details {
+      max-width: 600px;
+      margin: auto 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .product-title {
+      font-size: 48px;
+      color: #a1573e;
+      margin-bottom: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .product-title:hover {
+      color: #d76a39;
+    }
+
+    .product-description {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #5a3e2b;
+    }
+
+    .price-tag {
+      font-size: 28px;
+      font-weight: bold;
+      color: #e28f52;
+      margin-bottom: 20px;
+    }
+
+    .nutrition-box {
+      background-color: #fff5ec;
+      border-left: 6px solid #ffb680;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 6px 15px rgba(255, 185, 128, 0.2);
+      color: #5a3e2b;
+    }
+
+    .nutrition-box h3 {
+      font-size: 22px;
+      color: #a55c39;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .nutrition-box ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .nutrition-box li {
+      margin-bottom: 8px;
+    }
+
+    .add-btn {
+      padding: 14px 30px;
+      background-color: #ffad7e;
+      border: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      align-self: flex-start;
+    }
+
+    .add-btn:hover {
+      background-color: #e68a55;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(230, 138, 85, 0.5);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 25px;
+      font-size: 16px;
+      color: #874d2b;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s ease;
+      align-self: flex-start;
+    }
+
+    .back-link::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background-color: #874d2b;
+      transition: width 0.3s ease;
+    }
+
+    .back-link:hover::after {
+      width: 100%;
+    }
+
+    .back-link:hover {
+      color: #a15b3c;
+    }
+
+    @media (max-width: 768px) {
+      .product-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+        gap: 40px;
+      }
+
+      .card-bg {
+        width: 90vw;
+        height: auto;
+      }
+
+      .product-img {
+        max-width: 90vw;
+        max-height: none;
+      }
+
+      .product-details {
+        max-width: 90%;
+        margin: 0;
+        align-items: center;
+      }
+
+      .add-btn, .back-link {
+        align-self: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating wheat particles -->
+  <div class="floating-wheat" aria-hidden="true">
+    <svg class="wheat" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L13 7L15 6L13 11L17 12L13 13L14 18L12 14L10 18L11 13L7 12L11 11L9 6L11 7L12 2Z"/></svg>
+    <svg class="wheat" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L13 7L15 6L13 11L17 12L13 13L14 18L12 14L10 18L11 13L7 12L11 11L9 6L11 7L12 2Z"/></svg>
+    <svg class="wheat" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L13 7L15 6L13 11L17 12L13 13L14 18L12 14L10 18L11 13L7 12L11 11L9 6L11 7L12 2Z"/></svg>
+    <svg class="wheat" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L13 7L15 6L13 11L17 12L13 13L14 18L12 14L10 18L11 13L7 12L11 11L9 6L11 7L12 2Z"/></svg>
+    <svg class="wheat" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L13 7L15 6L13 11L17 12L13 13L14 18L12 14L10 18L11 13L7 12L11 11L9 6L11 7L12 2Z"/></svg>
+    <svg class="wheat" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L13 7L15 6L13 11L17 12L13 13L14 18L12 14L10 18L11 13L7 12L11 11L9 6L11 7L12 2Z"/></svg>
+    <svg class="wheat" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L13 7L15 6L13 11L17 12L13 13L14 18L12 14L10 18L11 13L7 12L11 11L9 6L11 7L12 2Z"/></svg>
+    <svg class="wheat" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L13 7L15 6L13 11L17 12L13 13L14 18L12 14L10 18L11 13L7 12L11 11L9 6L11 7L12 2Z"/></svg>
+    <svg class="wheat" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L13 7L15 6L13 11L17 12L13 13L14 18L12 14L10 18L11 13L7 12L11 11L9 6L11 7L12 2Z"/></svg>
+    <svg class="wheat" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L13 7L15 6L13 11L17 12L13 13L14 18L12 14L10 18L11 13L7 12L11 11L9 6L11 7L12 2Z"/></svg>
+  </div>
+
+  <!-- Main product content -->
+  <div class="product-container">
+    <div class="card-bg">
+      <img src="images/bake1.png" alt="Whole Grain Bread" class="product-img" />
+    </div>
+
+    <div class="product-details">
+      <h1 class="product-title">Whole Grain Bread</h1>
+      <p class="product-description">
+        Baked fresh every morning with hearty whole grains and zero preservatives. This bread is perfect for sandwiches, toasts, or just a warm slice with butter. It’s soft inside, crusty outside, and 100% delicious.
+      </p>
+      <p class="price-tag">$40</p>
+
+      <div class="nutrition-box">
+        <h3>Nutrition Info (per slice)</h3>
+        <ul>
+          <li><strong>Calories:</strong> 120 kcal</li>
+          <li><strong>Protein:</strong> 4g</li>
+          <li><strong>Carbs:</strong> 20g</li>
+          <li><strong>Fiber:</strong> 3g</li>
+          <li><strong>Fat:</strong> 2g</li>
+          <li><strong>Sugar:</strong> 1g</li>
+        </ul>
+      </div>
+
+      <button class="add-btn">Add to Cart</button><br />
+      <a href="index.html#Blog" class="back-link">← Back to Products</a>
+    </div>
+  </div>
+</body>
+</html>
